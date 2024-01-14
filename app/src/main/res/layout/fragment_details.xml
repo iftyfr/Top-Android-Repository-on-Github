@@ -1,0 +1,125 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivOwnerAvatar"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/tvRepoName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivOwnerAvatar" />
+
+    <TextView
+        android:id="@+id/tvRepoOwner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tvRepoName"
+        app:layout_constraintEnd_toEndOf="@+id/tvRepoName"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepoName"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tvRepoOwner"
+        app:layout_constraintEnd_toEndOf="@+id/tvRepoOwner"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepoOwner"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvStarsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tvRepoOwner"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvForksCount"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvDescription"
+        app:layout_constraintStart_toEndOf="@+id/tvStarsCount"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tvRepoOwner"
+        app:layout_constraintEnd_toEndOf="@+id/tvRepoOwner"
+        app:layout_constraintTop_toBottomOf="@+id/tvStarsCount"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvRepoUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:autoLink="web"
+        app:layout_constraintStart_toStartOf="@+id/tvRepoOwner"
+        app:layout_constraintEnd_toEndOf="@+id/tvRepoOwner"
+        app:layout_constraintTop_toBottomOf="@+id/tvLanguage"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvOwnerUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:autoLink="web"
+        app:layout_constraintStart_toStartOf="@+id/tvRepoOwner"
+        app:layout_constraintEnd_toEndOf="@+id/tvRepoOwner"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepoUrl"
+        android:layout_marginTop="8dp" />
+
+
+    <TextView
+        android:id="@+id/tvLastUpdateDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Last Update Date Time"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvOwnerUrl"
+        app:layout_constraintStart_toStartOf="@+id/tvOwnerUrl"
+        app:layout_constraintTop_toBottomOf="@+id/tvOwnerUrl" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="139dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
